@@ -1,0 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scrollbar-width: thin !important;
+}
+
+::-webkit-scrollbar {
+    height: 3px;
+    background: inherit;
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b9b9b9;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: none;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+    height: 3px;
+    border-radius: 10px;
+}

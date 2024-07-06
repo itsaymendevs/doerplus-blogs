@@ -1,0 +1,15 @@
+/* default style */
+
+input, textarea, select {
+  outline: none !important;
+}
+
+.init--link {
+  color: initial;
+}
+
+.init--link:hover, .init--link:focus {
+}
+
+/* transition */
+

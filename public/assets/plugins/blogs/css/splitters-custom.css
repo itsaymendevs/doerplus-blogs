@@ -1,0 +1,7 @@
+@keyframes slide-in {
+  from {
+    transform: translateY(-1em) scale(0.5);
+    opacity: 0;
+  }
+}
+
