@@ -3,6 +3,7 @@
 namespace App\Livewire\Website;
 
 use App\Models\Blog;
+use App\Models\BlogSetting;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
@@ -13,7 +14,7 @@ class Blogs extends Component
 
 
     // :: variables
-
+    public $settings;
 
 
 
@@ -21,7 +22,8 @@ class Blogs extends Component
     {
 
 
-
+        // 1: get instance
+        $this->settings = BlogSetting::first();
 
 
     } // end function

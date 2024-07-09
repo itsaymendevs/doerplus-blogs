@@ -1,5 +1,6 @@
 {{-- footer --}}
-<section class="footer--section position-relative js-parallax" style="background-image: url(&quot;{{ url("assets/plugins/blogs/img/helpers/pexels-ella-olsson-572949-1640771.jpg") }}&quot;);">
+<section class="footer--section position-relative js-parallax"
+    style='background-image: url({{ url("{$storagePath}/extra/blogs/settings/{$settings->footerImageFile}") }});'>
 
 
     {{-- overlay --}}

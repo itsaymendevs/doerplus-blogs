@@ -66,27 +66,80 @@
 
 
                 {{-- leftCol --}}
-                <div class="col-12 col-lg-5 col-xl-6">
+                <div class="col-12 col-lg-5 col-xl-6" data-aos="fade" data-aos-duration="500" data-aos-delay="500"
+                    data-aos-once="true">
                     <div class="swiper blog--swiper">
                         <div class="swiper-wrapper">
 
 
-                            {{-- loop - blogs --}}
-                            <div class="swiper-slide">
-                                <img class="w-100 header--image of-cover"
-                                    src="{{ url('assets/plugins/blogs/img/helpers/download-copy2B2.jpg') }}">
-                            </div>
+                            {{-- heros --}}
+
+
+
+                            {{-- 1: imageFile --}}
+                            @if ($settings->heroImageFile)
 
                             <div class="swiper-slide">
                                 <img class="w-100 header--image of-cover"
-                                    src="{{url('assets/plugins/blogs/img/helpers/121.jpeg')}}">
+                                    src='{{ url("{$storagePath}/extra/blogs/settings/{$settings->heroImageFile}") }}'>
                             </div>
 
+                            @endif
+                            {{-- end if --}}
+
+
+
+
+
+
+
+                            {{-- 2: secondImageFile --}}
+                            @if ($settings->heroSecondImageFile)
 
                             <div class="swiper-slide">
                                 <img class="w-100 header--image of-cover"
-                                    src="{{url('assets/plugins/blogs/img/helpers/download.jpeg')}}">
+                                    src='{{ url("{$storagePath}/extra/blogs/settings/{$settings->heroSecondImageFile}") }}'>
                             </div>
+
+                            @endif
+                            {{-- end if --}}
+
+
+
+
+
+
+                            {{-- 3: thirdImageFile --}}
+                            @if ($settings->heroThirdImageFile)
+
+                            <div class="swiper-slide">
+                                <img class="w-100 header--image of-cover"
+                                    src='{{ url("{$storagePath}/extra/blogs/settings/{$settings->heroThirdImageFile}") }}'>
+                            </div>
+
+                            @endif
+                            {{-- end if --}}
+
+
+
+
+
+
+
+                            {{-- 3: FourthImageFile --}}
+                            @if ($settings->heroFourthImageFile)
+
+                            <div class="swiper-slide">
+                                <img class="w-100 header--image of-cover"
+                                    src='{{ url("{$storagePath}/extra/blogs/settings/{$settings->heroFourthImageFile}") }}'>
+                            </div>
+
+                            @endif
+                            {{-- end if --}}
+
+
+
+
 
                         </div>
 
@@ -110,8 +163,14 @@
 
 
 
+
+
+
                 {{-- -------------------------------------------- --}}
                 {{-- -------------------------------------------- --}}
+
+
+
 
 
 
@@ -129,20 +188,30 @@
 
 
 
-                    {{-- choosen Blog --}}
+
+
+
+                    {{-- heroText --}}
+                    <div data-aos="fade" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
+                        class='d-block ql-editor header--emh' wire:ignore.self>{!! $settings?->heroText !!}</div>
+
+
 
 
 
                     {{-- title --}}
-                    <h6 data-aos="fade" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="mb-4">
-                        Standon Food &amp; Recipes</h6>
-
-
+                    {{-- <h6 data-aos="fade" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
+                        class="mb-4">
+                        Standon Food &amp; Recipes</h6> --}}
 
                     {{-- content --}}
-                    <h2 data-aos="fade" data-aos-duration="500" data-aos-delay="400" data-aos-once="true"
+                    {{-- <h2 data-aos="fade" data-aos-duration="500" data-aos-delay="400" data-aos-once="true"
                         class="fw-semibold ls-7 header--mh">With the hyper-convenience of modern life, many of us can
-                        only operate a microwave. A home-cooked meal is not a luxury, anyone can do it!</h2>
+                        only operate a microwave. A home-cooked meal is not a luxury, anyone can do it!</h2> --}}
+
+
+
+
                 </div>
             </div>
         </div>

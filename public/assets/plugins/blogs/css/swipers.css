@@ -1,6 +1,6 @@
 /* blogs */
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-    background: var(--bs-orange) !important;
+    background: var(--color-slider-bullets) !important;
     border-radius: 300px !important;
 }
 
@@ -21,7 +21,18 @@
 }
 
 .blog--swiper .swiper-pagination-bullet-active {
-    background-color: var(--bs-orange);
+    background-color: var(--color-slider-bullets);
+}
+
+.section--swiper .swiper-pagination-bullet {
+    width: 30px;
+    height: 3px;
+    border-radius: 300px;
+    background-color: lightgrey;
+}
+
+.section--swiper .swiper-pagination-bullet-active {
+    background-color: var(--color-slider-bullets);
 }
 
 /* -------------------------------- */
@@ -35,5 +46,9 @@
 }
 
 .section--side-swiper .swiper-pagination-bullet-active {
-    background-color: var(--bs-orange);
+    background-color: var(--color-slider-bullets);
+}
+
+.section--regular-swiper .swiper-slide {
+    width: auto !important;
 }

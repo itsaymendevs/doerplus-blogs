@@ -5,6 +5,7 @@ var swiper = new Swiper(".blog--swiper", {
     spaceBetween: 30,
     mousewheel: true,
     autoplay: true,
+    grabCursor: true,
     loop: true,
     pagination: {
         el: ".swiper-pagination",
@@ -16,16 +17,35 @@ $(".section--side-swiper").each(function () {
     new Swiper(this, {
         grabCursor: true,
         effect: "creative",
+        mousewheel: true,
         autoplay: true,
         loop: true,
         creativeEffect: {
             prev: {
                 shadow: true,
-                translate: [0, 0, -400],
+                origin: "left center",
+                translate: ["-5%", 0, -200],
+                rotate: [0, 100, 0],
             },
             next: {
-                translate: ["100%", 0, 0],
+                origin: "right center",
+                translate: ["5%", 0, -200],
+                rotate: [0, -100, 0],
             },
+        },
+    });
+});
+
+$(".section--regular-swiper").each(function () {
+    new Swiper(this, {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        autoplay: true,
+        grabCursor: true,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
     });
 });
