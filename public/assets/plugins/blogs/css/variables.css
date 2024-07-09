@@ -5,6 +5,8 @@
     --color-body: #ffffff;
     --color-hero: #fafafa;
     --color-hero-text: #111;
+    --color-menu: #fafafa;
+    --color-menu-text: #111;
     --color-slider-bullets: var(--bs-orange);
     --color-cursor: #fd7e1466;
     --color-secondary-cursor: #fd7e144a;
@@ -14,11 +16,14 @@
     --color-card-author: #111;
     --color-card-date: #111;
     --color-card-button-text: #111;
+    --color-card-button-text-hover: #111;
     --color-card-button-border: var(--bs-yellow);
     --color-card-button-border-hover: #87b2a9;
     --color-card-button-shadow: #b9b9b942;
     --color-card-button-shadow-hover: #78787842;
     --color-single-blog-author: var(--bs-form-valid-border-color);
+    --color-mobile-menu: #00a651;
+    --color-mobile-menu-text: white;
 
     /* radius */
     --radius-hero-image: 20px;

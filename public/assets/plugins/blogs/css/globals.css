@@ -101,6 +101,7 @@ a:focus {
 .btn--readmore {
     display: inline-flex;
     padding: 0px;
+    color: var(--color-card-button-text);
     font-size: 14px;
     align-items: center;
     border: none;
@@ -112,6 +113,7 @@ a:focus {
 .btn--readmore:hover,
 .btn--readmore:focus {
     border-radius: 0px;
+    color: var(--color-card-button-text-hover);
     border-bottom: 2px solid var(--color-card-button-border-hover);
     box-shadow: 0px 11px 12px 0px var(--color-card-button-shadow-hover);
 }

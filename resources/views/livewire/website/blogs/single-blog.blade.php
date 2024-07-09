@@ -3,6 +3,24 @@
 
 
 
+    {{-- colors --}}
+    <livewire:website.components.colors.colors-blogs />
+
+
+
+
+
+    {{-- -------------------------------------------------------- --}}
+    {{-- -------------------------------------------------------- --}}
+
+
+
+
+
+
+
+
+
     {{-- header --}}
     <div class="container container--mod">
         <div class="row align-items-start">
@@ -12,7 +30,8 @@
                 {{-- author - date --}}
                 <div class="fs-13 fw-500 mb-3 d-flex justify-content-between align-items-center">
 
-                    <span class='single--blog-author'>{{ date('M Y', strtotime($blog->publishDate)) }}
+                    <span class='single--blog-author' data-aos="fade" data-aos-duration="500" data-aos-delay="200">{{
+                        date('M Y', strtotime($blog->publishDate)) }}
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
                             viewBox="0 0 16 16" class="bi bi-dash-lg mx-3">
                             <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z">
@@ -67,7 +86,8 @@
 
 
     {{-- scrollCover --}}
-    <div class="@if ($blog->isHeaderFluid) container-fluid px-0  @else container container--mod @endif">
+    <div class="@if ($blog->isHeaderFluid) container-fluid px-0  @else container container--mod @endif"
+        data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
         <div class="row">
             <div class="col-12 mt-4 mb-5 pb-4">
                 <div class='w-100 single--blog-cover js-parallax'

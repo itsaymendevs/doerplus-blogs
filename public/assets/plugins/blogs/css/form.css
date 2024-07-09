@@ -1,41 +1,41 @@
 .form--input {
-  display: flex;
-  border: 1px solid whitesmoke;
-  border-radius: 10px;
-  height: 50px;
-  width: 100%;
-  align-items: center;
-  padding: 0px 15px;
-  font-size: 14px;
+    display: flex;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    padding: 0px 15px;
+    font-size: 14px;
 }
 
 .form--input.for-subscription {
-  max-width: 330px;
-  border-radius: 10px 0px 0px 10px;
+    max-width: 330px;
+    border-radius: 10px 0px 0px 10px;
 }
 
 /* input button */
 
 .form--button {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .form--button.for--subscription {
-  border: 2px solid var(--bs-orange);
-  border-radius: 0px 10px 10px 0px;
-  color: white;
-  max-width: 120px;
-  width: 100%;
-  font-size: 14px;
-  text-transform: uppercase;
-  padding: 0px;
+    border: 2px solid var(--color-card-button-border-hover);
+    border-radius: 0px 10px 10px 0px;
+    color: white;
+    max-width: 120px;
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0px;
 }
 
-.form--button.for--subscription:hover, .form--button.for--subscription:focus {
-  background-color: var(--bs-orange);
-  color: white;
+.form--button.for--subscription:hover,
+.form--button.for--subscription:focus {
+    background-color: var(--color-card-button-border-hover);
+    color: white;
 }
-

@@ -3,7 +3,8 @@
 
 
     {{-- navbar --}}
-    <section data-aos="slide-down" data-aos-duration="500" data-aos-once="true" class="navbar--section">
+    <section data-aos="slide-down" data-aos-duration="500" data-aos-once="true"
+        class="navbar--section @if (Request::is('blogs/*')) customized @endif">
         <div class="container container--mod">
             <div class="row align-items-center">
 

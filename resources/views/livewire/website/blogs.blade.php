@@ -1,4 +1,25 @@
 <section class="content--section pt-4 pt-lg-5">
+
+
+
+
+    {{-- colors --}}
+    <livewire:website.components.colors.colors-blogs />
+
+
+
+
+
+    {{-- -------------------------------------------------------- --}}
+    {{-- -------------------------------------------------------- --}}
+
+
+
+
+
+
+
+
     <div class="container container--mod">
         <div class="row align-items-start">
 
