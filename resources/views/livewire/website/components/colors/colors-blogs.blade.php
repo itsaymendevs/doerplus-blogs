@@ -3,14 +3,19 @@
 
 
 
-    {{-- head --}}
-    @section('head')
+    {{-- styles --}}
+    @section('styles')
 
 
 
 
     <style>
         :root {
+
+            /* fonts */
+            --font-body: <?php echo "$settings->textFont" ?>;
+            --font-heading: <?php echo "$settings->headingFont" ?>;
+
 
             /* colors */
             --color-theme: <?php echo "$settings->textColor" ?>;
@@ -37,6 +42,13 @@
             --color-single-blog-author: <?php echo "$settings->singleBlogAuthorColor" ?>;
             --color-mobile-menu: <?php echo "$settings->mobileMenuBackgroundColor" ?>;
             --color-mobile-menu-text: <?php echo "$settings->mobileMenuTextColor" ?>;
+
+
+            --color-single-blog-tags: <?php echo "$settings->singleBlogTagColor" ?>;
+            --color-single-blog-tags-hover: <?php echo "$settings->singleBlogTagHoverColor" ?>;
+            --color-single-blog-tags-text: <?php echo "$settings->singleBlogTagTextColor" ?>;
+            --color-single-blog-tags-text-hover: <?php echo "$settings->singleBlogTagTextHoverColor" ?>;
+
 
 
 

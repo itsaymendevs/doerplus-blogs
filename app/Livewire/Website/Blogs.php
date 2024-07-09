@@ -49,14 +49,14 @@ class Blogs extends Component
 
 
         // 1: dependencies
-        $perPage = 3;
-        $blogs = Blog::all();
+        $perPage = $this->settings?->numberOfColumns ?? 3;
+        $blogs = Blog::where('isForWebsite', true)->get();
 
 
 
         // 1.2: parts
         $partCounter = 1;
-        $partBlogs = $secondPartBlogs = $thirdPartBlogs = [];
+        $partBlogs = $secondPartBlogs = $thirdPartBlogs = $fourthPartBlogs = [];
 
         foreach ($blogs ?? [] as $blog) {
 
@@ -64,9 +64,11 @@ class Blogs extends Component
             $partCounter == 1 ? array_push($partBlogs, $blog) : null;
             $partCounter == 2 ? array_push($secondPartBlogs, $blog) : null;
             $partCounter == 3 ? array_push($thirdPartBlogs, $blog) : null;
+            $partCounter == 4 ? array_push($fourthPartBlogs, $blog) : null;
 
 
-            $partCounter == 3 ? $partCounter = 1 : $partCounter++;
+            $partCounter == $perPage ? $partCounter = 1 : $partCounter++;
+
 
 
         } // end loop
@@ -77,7 +79,7 @@ class Blogs extends Component
 
 
 
-        return view('livewire.website.blogs', compact('blogs', 'partBlogs', 'secondPartBlogs', 'thirdPartBlogs'));
+        return view('livewire.website.blogs', compact('perPage', 'blogs', 'partBlogs', 'secondPartBlogs', 'thirdPartBlogs', 'fourthPartBlogs'));
 
 
     } // end function

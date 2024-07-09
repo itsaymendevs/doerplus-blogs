@@ -86,7 +86,7 @@ trait HelperTrait
 
 
         // 1: define defaultPreview Picture
-        $defaultPreview = asset('assets/img/placeholder.png');
+        $defaultPreview = url('assets/img/placeholder.png');
 
         return $defaultPreview;
 

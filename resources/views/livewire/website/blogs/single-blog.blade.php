@@ -3,6 +3,50 @@
 
 
 
+
+    {{-- head --}}
+    @section('head')
+
+
+
+
+    {{-- title - description - keywords meta --}}
+    <title>Blog - {{ $blog->title }}</title>
+
+    <meta name="description"
+        content="Effortlessly plan your meals with our intuitive meal planner software. Create customized meal plans, track your nutrition, and discover delicious recipes to suit your dietary preferences. Simplify your meal planning today!">
+
+
+    {{--
+    <meta name="keywords" content="Doer - Meal Plan Manager"> --}}
+
+
+
+    @endsection
+    {{-- endHead --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {{-- -------------------------------------------------------- --}}
+    {{-- -------------------------------------------------------- --}}
+
+
+
+
+
+
+
+
     {{-- colors --}}
     <livewire:website.components.colors.colors-blogs />
 
@@ -10,8 +54,13 @@
 
 
 
+
+
+
     {{-- -------------------------------------------------------- --}}
     {{-- -------------------------------------------------------- --}}
+
+
 
 
 
@@ -76,9 +125,16 @@
 
 
 
+
+
+
     {{-- ---------------------------------------------- --}}
     {{-- ---------------------------------------------- --}}
     {{-- ---------------------------------------------- --}}
+
+
+
+
 
 
 
@@ -102,9 +158,15 @@
 
 
 
+
+
+
     {{-- ---------------------------------------------- --}}
     {{-- ---------------------------------------------- --}}
     {{-- ---------------------------------------------- --}}
+
+
+
 
 
 
@@ -113,6 +175,8 @@
 
     {{-- content --}}
     <div class="container container--mod">
+
+
 
 
 
@@ -426,10 +490,6 @@
 
 
 
-
-
-
-
     </div>
     {{-- endContainer --}}
 
@@ -446,6 +506,75 @@
 
 
 
+    {{-- ---------------------------------------------- --}}
+    {{-- ---------------------------------------------- --}}
+    {{-- ---------------------------------------------- --}}
+
+
+
+
+
+
+
+
+
+    {{-- tagsContainer --}}
+    @if ($blog?->tags?->count() > 0 && $blog->showTags)
+
+    <div class="container container--mod">
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="single--blog-tags-wrap">
+
+
+
+                    {{-- heading --}}
+                    <h6 data-aos="fade" data-aos-duration="500">
+                        <span>Blog Tags
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                viewBox="0 0 16 16" class="bi bi-arrow-right ms-2 me-4 fs-14">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
+                                </path>
+                            </svg>
+                        </span>
+
+
+
+
+                        {{-- loop - tags --}}
+                        @foreach ($blog?->tags ?? [] as $key => $tag)
+
+                        <button class="btn single--blog-tags" data-aos="fade-up" data-aos-duration="500"
+                            data-aos-delay="{{ $key * 50 }}" type="button">{{ $tag->tag }}</button>
+
+                        @endforeach
+                        {{-- end loop --}}
+
+
+
+
+                    </h6>
+                    {{-- endHeading --}}
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @endif
+    {{-- endContainer --}}
+
+
+
+
+
+
+
+
 
 
     {{-- -------------------------------------------------- --}}
@@ -455,11 +584,25 @@
 
 
 
+
+
+
+
+    {{-- section --}}
     @section('scripts')
 
-    <script src="{{asset('assets/plugins/blogs/js/init-swipers.js')}}"></script>
+
+
+    {{-- 1: swiper --}}
+    <script src="{{url('assets/plugins/blogs/js/init-swipers.js')}}"></script>
+
+
+
 
     @endsection
+    {{-- endSection --}}
+
+
 
 
 

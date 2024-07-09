@@ -7,10 +7,14 @@ html {
 }
 
 body * {
-    font-family: "Poppins";
-    color: #111;
+    font-family: var(--font-body);
+    color: var(--color-theme);
     transition: 0.4s all ease-in-out;
     letter-spacing: 0.3px;
+}
+
+.btn {
+    color: var(--color-theme);
 }
 
 a:hover,
@@ -84,11 +88,11 @@ a:focus {
 /* custom fonts */
 
 .font--handwrite {
-    font-family: "Courgette";
+    font-family: var(--font-heading);
 }
 
 .font--handwrite * {
-    font-family: "Courgette";
+    font-family: var(--font-heading);
 }
 
 /* buttons */

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\BlogSetting;
 use App\Traits\HelperTrait;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -47,6 +48,15 @@ class AppServiceProvider extends ServiceProvider
 
         // 1.3: globalCounter
         View::share('globalSNCounter', 1);
+
+
+
+
+
+        // 1.4: fonts
+        $settings = BlogSetting::first();
+
+        View::share('fontLinks', $settings?->fontLinks);
 
 
 

@@ -1,6 +1,10 @@
 :root {
+    /* fonts */
+    --font-body: "Poppins";
+    --font-heading: "Courgette";
+
     /* colors */
-    --color-theme: #87b2a9;
+    --color-theme: #111;
     --color-secondary-theme: #87b2a9;
     --color-body: #ffffff;
     --color-hero: #fafafa;
@@ -24,6 +28,11 @@
     --color-single-blog-author: var(--bs-form-valid-border-color);
     --color-mobile-menu: #00a651;
     --color-mobile-menu-text: white;
+
+    --color-single-blog-tags: var(--bs-orange);
+    --color-single-blog-tags-hover: whitesmoke;
+    --color-single-blog-tags-text: white;
+    --color-single-blog-tags-text-hover: #111;
 
     /* radius */
     --radius-hero-image: 20px;

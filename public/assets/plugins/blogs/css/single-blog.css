@@ -114,3 +114,39 @@
     width: 350px !important;
     height: 350px;
 }
+
+/* tags */
+
+.single--blog-tags-wrap h6 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.single--blog-tags-wrap span {
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.single--blog-tags {
+    padding: 0px 10px;
+    margin-right: 10px;
+    font-weight: 500;
+    background-color: var(--color-single-blog-tags);
+    border-radius: 2px;
+    font-size: 13px;
+    color: var(--color-single-blog-tags-text) !important;
+    border: none;
+    margin-bottom: 10px;
+    transition: 0.3s all ease-in-out;
+}
+
+.single--blog-tags:hover,
+.single--blog-tags:focus {
+    color: var(--color-single-blog-tags-text-hover) !important;
+    background-color: var(--color-single-blog-tags-hover);
+    transition: 0.3s all ease-in-out !important;
+}

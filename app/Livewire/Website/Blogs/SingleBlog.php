@@ -24,7 +24,7 @@ class SingleBlog extends Component
 
 
         // 1: get instance
-        $this->blog = Blog::find($title);
+        $this->blog = Blog::where('titleURL', $title)?->latest()?->first();
 
 
     } // end function

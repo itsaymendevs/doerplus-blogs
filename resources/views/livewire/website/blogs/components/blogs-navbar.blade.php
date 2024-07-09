@@ -10,13 +10,14 @@
 
 
                 {{-- logo --}}
-                <div class="col-4 col-sm-3">
-                    <img class="navbar--logo of-contain" src="{{url('assets/plugins/blogs/img/logo/aleens.png')}}">
+                <div class="col-5 col-sm-3">
+                    <img class="navbar--logo of-contain"
+                        src='{{url("assets/plugins/blogs/img/logo/{$profile->imageFile}")}}'>
                 </div>
 
 
                 {{-- desktopMenu --}}
-                <div class="col-8 col-sm-9 text-end d-flex justify-content-end">
+                <div class="col-7 col-sm-9 text-end d-flex justify-content-end">
                     <div id="menu--desktop"
                         class="d-none d-lg-inline-flex align-items-center justify-content-center me-4">
                         <a href="{{ route('website.blogs') }}" class="btn navbar--links" data-aos="fade"

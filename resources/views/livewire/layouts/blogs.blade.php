@@ -18,6 +18,15 @@
         {{-- fonts --}}
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        {!! $fontLinks !!}
+
+
+
+
+        {{-- fonts - fallback --}}
+        @if (empty($fontLinks))
+
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet">
@@ -25,6 +34,10 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet">
+
+        @endif
+        {{-- end if --}}
+
 
 
 
@@ -79,6 +92,14 @@
 
         {{-- head --}}
         @yield('head')
+
+
+
+
+
+        {{-- styles --}}
+        @yield('styles')
+
 
 
 
@@ -184,15 +205,15 @@
 
 
         {{-- scripts --}}
-        <script src="{{asset('assets/plugins/blogs/bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{url('assets/plugins/blogs/bootstrap/js/bootstrap.min.js')}}"></script>
         <script src="https://unpkg.com/kinet@2.2.1/dist/kinet.min.js"></script>
-        <script src="{{asset('assets/plugins/blogs/js/aos.min.js')}}"></script>
-        <script src="{{asset('assets/plugins/blogs/js/splitting.min.js')}}"></script>
-        <script src="{{asset('assets/plugins/blogs/js/stretchy.js')}}"></script>
-        <script src="{{asset('assets/plugins/blogs/js/jarallax.min.js')}}"></script>
-        <script src="{{asset('assets/plugins/blogs/js/loader.js')}}"></script>
-        <script src="{{asset('assets/plugins/blogs/js/bs-init.js')}}"></script>
-        <script src="{{asset('assets/plugins/blogs/js/init.js')}}"></script>
+        <script src="{{url('assets/plugins/blogs/js/aos.min.js')}}"></script>
+        <script src="{{url('assets/plugins/blogs/js/splitting.min.js')}}"></script>
+        <script src="{{url('assets/plugins/blogs/js/stretchy.js')}}"></script>
+        <script src="{{url('assets/plugins/blogs/js/jarallax.min.js')}}"></script>
+        <script src="{{url('assets/plugins/blogs/js/loader.js')}}"></script>
+        <script src="{{url('assets/plugins/blogs/js/bs-init.js')}}"></script>
+        <script src="{{url('assets/plugins/blogs/js/init.js')}}"></script>
 
 
 
