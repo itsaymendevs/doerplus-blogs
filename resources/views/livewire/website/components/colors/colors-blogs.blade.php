@@ -13,13 +13,13 @@
         :root {
 
             /* fonts */
-            --font-body: <?php echo "$settings->textFont" ?>;
-            --font-heading: <?php echo "$settings->headingFont" ?>;
+            --font-body: <?php echo "$profile->textFont" ?>;
+            --font-heading: <?php echo "$profile->headingFont" ?>;
 
 
             /* colors */
             --color-theme: <?php echo "$settings->textColor" ?>;
-            --color-body: <?php echo "$settings->bodyColor" ?>;
+            --color-body: <?php echo "$settings->bodyBackgroundColor" ?>;
             --color-hero: <?php echo "$settings->heroBackgroundColor" ?>;
             --color-hero-text: <?php echo "$settings->heroTextColor" ?>;
             --color-menu: <?php echo "$settings->singleBlogNavbarBackgroundColor" ?>;

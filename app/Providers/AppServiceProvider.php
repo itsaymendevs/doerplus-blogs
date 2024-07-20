@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Models\BlogSetting;
+use App\Models\Profile;
 use App\Traits\HelperTrait;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -54,9 +54,9 @@ class AppServiceProvider extends ServiceProvider
 
 
         // 1.4: fonts
-        $settings = BlogSetting::first();
+        $profile = Profile::first();
 
-        View::share('fontLinks', $settings?->fontLinks);
+        View::share('fontLinks', $profile?->fontLinks);
 
 
 

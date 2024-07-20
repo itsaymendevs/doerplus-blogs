@@ -12,7 +12,7 @@
                 {{-- logo --}}
                 <div class="col-5 col-sm-3">
                     <img class="navbar--logo of-contain"
-                        src='{{url("assets/plugins/blogs/img/logo/{$profile->imageFile}")}}'>
+                        src='{{ url("{$storagePath}/profile/{$profile->imageFile}") }}'>
                 </div>
 
 
